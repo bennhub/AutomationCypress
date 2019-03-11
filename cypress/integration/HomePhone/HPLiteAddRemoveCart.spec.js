@@ -8,7 +8,7 @@ describe('Home Phone Lite', function() {
       // Should be on a new URL which includes '/commands/actions'
       cy.url().should('include', '/home-phone/plans')
 
-      cy.get('[data-qa=button-home-phone-lite]').click()
+      cy.get('[data-qa=button-home-phone-lite]').click({force: true})
 
       cy.contains('Check availability').click()
         .wait(3000)

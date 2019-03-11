@@ -10,7 +10,6 @@ describe('Home Phone', function() {
       
       cy.get('[data-qa=button-home-phone]').click()
         
-      
       cy.contains('Check availability').click()
         .wait(3000)
   

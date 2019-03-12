@@ -5,7 +5,7 @@ describe('Home Phone', function() {
   
       cy.contains('Shop Home Phone').click()
   
-      // Should be on a new URL which includes '/commands/actions'
+      // Should be on a new URL which includes '/home-phone/plans'
       cy.url().should('include', '/home-phone/plans')
       
       cy.get('[data-qa=button-home-phone]').click()

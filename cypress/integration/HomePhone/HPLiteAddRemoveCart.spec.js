@@ -5,7 +5,7 @@ describe('Home Phone Lite', function() {
   
       cy.contains('Shop Home Phone').click()
   
-      // Should be on a new URL which includes '/commands/actions'
+      // Should be on a new URL which includes '/home-phone/plans'
       cy.url().should('include', '/home-phone/plans')
 
       cy.get('[data-qa=button-home-phone-lite]').click({force: true})
@@ -17,7 +17,7 @@ describe('Home Phone Lite', function() {
         .type(Cypress.env('address'))
 
       cy.contains('Check availability').click()
-        .wait(9000)
+        .wait(7000)
 
      // Verify correct image is visible on pdp page
       cy.get('.css-lv63rw').should('be.visible');

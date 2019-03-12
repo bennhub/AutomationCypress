@@ -21,12 +21,13 @@
       cy.contains('Check availability').click()
         .wait(9000)
 
-      cy.get('[data-qa=button-addToCartCta]').click()
+      cy.get('[data-qa=button-addToCartCta]').click().should ('be.visible')
       
       cy.contains('Select an Internet plan').click({force: true})
+         .wait(4000)
 
- 
-      cy.get('[data-qa=button-internet-150-30]').click({multiple: true})
+      cy.get('[data-qa=button-internet-150-30]')
+        .click({ multiple: true, force: true })
 
       cy.get('[data-qa=button-addToCartCta]').click()
 

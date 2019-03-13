@@ -7,7 +7,7 @@ Cypress runs much, much faster in comparison with the end to end tools by Seleni
 There is screen shot for every step, of your script, which can be quite helpful if there is any false passing or failing test, yeah good for debugging!!
 Cypress has a clear syntax, it is easy to read it, you will like it!!
 
-## install
+## Install
 https://docs.cypress.io/guides/getting-started/installing-cypress.html#Installing
 
 ## Commands
@@ -17,11 +17,17 @@ run headless:
 npm run cy:run 
 ```
 
-run visually with test runner: 
+run visually with test runner:
+```bash
 npm run cypress:open
+```
 
 run single test:
+```bash
 npm run cy:run --  --spec "cypress/integration/HomePhone/HPLiteAddRemoveCart.spec.js"
+```
 
 run with with dashboard service:
+```bash
 ./node_modules/.bin/cypress run --record --key 203f8361-e600-4aa7-b164-f17a5503a072
+```

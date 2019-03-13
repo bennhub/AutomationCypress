@@ -7,12 +7,15 @@ Cypress runs much, much faster in comparison with the end to end tools by Seleni
 There is screen shot for every step, of your script, which can be quite helpful if there is any false passing or failing test, yeah good for debugging!!
 Cypress has a clear syntax, it is easy to read it, you will like it!!
 
-# install
+## install
 https://docs.cypress.io/guides/getting-started/installing-cypress.html#Installing
 
-# Commands
-run headless: 
+## Commands
+
+run headless:
+```bash
 npm run cy:run 
+```
 
 run visually with test runner: 
 npm run cypress:open

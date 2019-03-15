@@ -1,10 +1,13 @@
-describe('Home Phone Lite', function() {
+  describe('Optik TV', function() {
     it('Gets, types and asserts', function() {
+  
+      
+     
+      cy.visit(Cypress.env('stageUrl'))
 
-cy.visit('https://www.telus.com/en/bc/shop/home/internet/plans')
-
-cy.xpath('//a[contains(text(),"Gift with Purchase")]').click()
-
- 
-})
-})
+       
+    
+      
+      cy.get('.css-vbu1if:nth-child(2) .TDS_BaseButton-modules__sizing___2kf7G').click({force: true})
+    })
+  })

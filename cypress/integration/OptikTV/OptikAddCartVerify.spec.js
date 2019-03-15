@@ -11,14 +11,14 @@
       cy.url().should('include', '/optik/plans')
 
       // I click on Essentials 2year term in cat
-      cy.get('[data-qa=button-essentials-mediaroomtv-hs2-0]').click({ multiple: true, force: true })
+      cy.get('.css-vbu1if:nth-child(2) .TDS_BaseButton-modules__sizing___2kf7G').click({force: true })
       
       // I check if its available based on address
       cy.contains('Check availability').click()
         .wait(600)
 
       cy.get('#autocomplete-form-address')
-        .type(Cypress.env('address'))
+        .type(Cypress.env('address_150'))
 
       cy.contains('Check availability').click()
         .wait(9000)
@@ -32,10 +32,10 @@
       cy.contains('Select an Internet plan').click({force: true})
          .wait(4000)
 
-      cy.get('[data-qa=button-internet-150-30]')
-        .click({ multiple: true, force: true })
+      cy.get('.css-vbu1if:nth-child(2) .TDS_BaseButton-modules__sizing___2kf7G').click({force: true})
+       
 
-      cy.get('[data-qa=button-addToCartCta]').click()
+      cy.get('[data-qa=button-addToCartCta]').click({force: true})
 
       cy.get('.css-hmxcde').click()
 

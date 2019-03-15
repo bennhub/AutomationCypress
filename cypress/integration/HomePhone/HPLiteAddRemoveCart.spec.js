@@ -14,7 +14,7 @@ describe('Home Phone Lite', function() {
         .wait(3000)
 
       cy.get('#autocomplete-form-address')
-        .type(Cypress.env('address'))
+        .type(Cypress.env('address_150'))
 
       cy.contains('Check availability').click()
         .wait(7000)

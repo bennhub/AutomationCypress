@@ -3,11 +3,11 @@
   
       
      
-      cy.visit(Cypress.env('stageUrl'))
+      cy.visit('https://www.telus.com/en/bc/shop/home/internet/plans')
 
        
     
       
-      cy.get('.css-vbu1if:nth-child(2) .TDS_BaseButton-modules__sizing___2kf7G').click({force: true})
+      cy.get('.css-vbu1if:nth-child(5) .TDS_BaseButton-modules__sizing___2kf7G').click({force: true})
     })
   })

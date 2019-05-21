@@ -23,7 +23,7 @@ describe('Home Phone Lite', function() {
       cy.get('.css-lv63rw').should('be.visible');
 
      // Verify correct pricing and details on pdp page
-      cy.get('.css-14w0bz > :nth-child(1)').should('have.text', 'No term  $30/monthPay $15 for the first 3 months2');
+      cy.get('.css-0 > :nth-child(2)').should('have.text', '$30/month');
       
       // I add to cart
       cy.contains('Add to cart').click()
@@ -34,7 +34,7 @@ describe('Home Phone Lite', function() {
         .wait(3000)
 
       // I Verify correct pricing and text in summary box 
-      cy.get('.summary-box__container').should('have.text', 'SummaryMonthly billFirst billHome Phone$15.00$15.00SubtotalBefore taxes$15.00Monthly bill$15.00First billCheck outContinue shoppingClose');
+      cy.get('.summary-box__footer-container').should('have.text', 'SubtotalBefore taxes$30.00Monthly bill$30.00First billCheck outContinue shoppingClose');
        
       // I remove from cart
       cy.contains('Remove').click()

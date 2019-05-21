@@ -1,0 +1,15 @@
+describe('Internet Plans Legal Copy', function() {
+    it('Gets, types and asserts', function() {
+      
+      cy.visit('https://www.telus.com/en/bc/shop/home/internet/plans')
+
+      //Verify term and conditions
+      cy.contains('Terms and conditions').click()
+      .should('contain.text','Terms and conditions')
+      //Verify Legal copy
+      cy.get('[data-testid=terms]').should('contain.text','Terms and conditionsOffer subject to change without notice. TELUS reserves the right to modify regular pricing without notice. Minimum system requirements apply. Final eligibility for service will be determined by a TELUS representative.Internet access speed depends on location, usage within the home network, Internet traffic, applicable network management and server configurations. For a description of TELUS’ network management practices, please see telus.com/networkmanagement. Additional usage charges may apply.Speed and signal strength may vary with your configuration, Internet traffic, environmental conditions, applicable network management or other factors. For a description of TELUS network management practices, please see telus.com/networkmanagement.Offer available until further notice. $0 Unlimited data offer is only available to customers signing up for Internet 150/150 or Internet 300/300 on a 2 year service agreement. Regular pricing (currently $15 for Unlimited Data add-on) applies at month 25.$150 bill credit, only available to online orders of Internet and Optik TV bundles on a 2-year term. A $100 credit will be applied to online orders of only Internet or Optik TV on a 2-year term. Available to residential customers who have not subscribed to TELUS TV or Internet in the past 90 days. Offer subject to change without notice. Bill credit will be applied upon order completion and will appear on your first bill after activation. Bill credits are non-transferable, can only be applied to pay for services charges, and carry no cash value after deactivating your services.Internet access is subject to usage limits; additional charges apply for exceeding the included data.1GB of bonus data for $0 per month available for TELUS mobility customers on select plans. To share data, all additional lines need to be on the same shareable data plan as the primary mobile device. If account exceeds maximum data option allowance, standard data overage charges for usage will apply. Available in BC/AB for new TELUS home services customers. Customers must link the mobility and home services account to get this offer. After 24 months, the 1GB of bonus data will be removed from the customer’s account. It may take up to 8 business days from date of activation for the 1GB of bonus data to be available for use. Limit of one promotional offer of 1GB of bonus data for $0/month for 24 months per customer account.Must have TELUS Internet. Regular pricing will apply from month 25 onwards. TELUS reserves the right to modify regular pricing without notice. Minimum system requirements apply. Final eligibility for the services will be determined by a TELUS representative.')
+
+      
+
+    })
+})

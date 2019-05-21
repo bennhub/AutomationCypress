@@ -14,7 +14,7 @@ describe('Home Phone', function() {
         .wait(3000)
   
       cy.get('#autocomplete-form-address')
-        .type(Cypress.env('address_75'))
+        .type(Cypress.env('address_150'))
   
       cy.contains('Check availability').click()
          .wait(9000) 
@@ -23,7 +23,7 @@ describe('Home Phone', function() {
       cy.get('.css-lv63rw').should('be.visible');
   
      // Verify correct pricing and details on pdp page
-      cy.get('.TDS_Box-modules__horizontalPadding-3___2uoUp').should('contain.text', 'No term  $40/monthPay $25 for the first 3 months2Add to cart');
+     cy.get('.TDS_Box-modules__horizontalPadding-3___2uoUp').should('contain.text','No term  $40/monthAdd to cart');
      
       // I add to cart
       cy.contains('Add to cart').click()
@@ -34,7 +34,7 @@ describe('Home Phone', function() {
         .wait(3000)
   
       // I Verify correct pricing and text in summary box 
-      cy.get('.summary-box__container').should('have.text', 'SummaryMonthly billFirst billHome Phone$25.00$25.00SubtotalBefore taxes$25.00Monthly bill$25.00First billCheck outContinue shoppingClose');
+      cy.get('.summary-box__footer-container').should('have.text', 'SubtotalBefore taxes$40.00Monthly bill$40.00First billCheck outContinue shoppingClose');
        
       // I remove from cart
       cy.contains('Remove').click()

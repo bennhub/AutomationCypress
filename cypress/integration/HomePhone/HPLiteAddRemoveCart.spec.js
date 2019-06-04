@@ -23,7 +23,7 @@ describe('Home Phone Lite', function() {
       cy.get('.css-lv63rw').should('be.visible');
 
      // Verify correct pricing and details on pdp page
-      cy.get('.css-0 > :nth-child(2)').should('have.text', '$30/month');
+      cy.get('.css-0 > :nth-child(2)').should('have.text', '$30per month');
       
       // I add to cart
       cy.contains('Add to cart').click()

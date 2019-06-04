@@ -23,7 +23,7 @@ describe('Home Phone', function() {
       cy.get('.css-lv63rw').should('be.visible');
   
      // Verify correct pricing and details on pdp page
-     cy.get('.TDS_Box-modules__horizontalPadding-3___2uoUp').should('contain.text','No term  $40/monthAdd to cart');
+     cy.get('.TDS_Box-modules__horizontalPadding-3___2uoUp').should('contain.text','No term  $40per monthAdd to cart');
      
       // I add to cart
       cy.contains('Add to cart').click()

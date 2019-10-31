@@ -9,20 +9,20 @@ describe('Optik TV', function() {
       cy.url().should('include', '/pik/plans')
 
       //Verify image is visible
-      cy.get('.css-1ne2uoa').should('be.visible')
+      cy.get('.style__Image-fxrvoo-2').should('be.visible')
 
        //Verify pricing
-      cy.get('.css-0 > :nth-child(2)').should('contain.text','$10/month')
+      cy.get('.style__Container-sc-1yj7jeu-1').invoke('text').should('contain','$5/month')
 
        //Verify pricing details
-      cy.get('.css-14w0bz > :nth-child(1) > :nth-child(3)').should('contain.text','Pay $0 for the first month1')
+       cy.get('.style__Container-sc-15in1n8-0').invoke('text').should('contain','24 months')
 
       //Verify term and conditions
-      cy.contains('Terms and conditions').click()
-      .should('contain.text','Terms and conditions')
+      cy.contains('View terms and conditions').click()
+      
       
       //Verify Legal copy
-      cy.get('[data-testid=terms]').should('contain.text','Terms and conditionsOffer subject to change without notice. TELUS reserves the right to modify regular pricing without notice. Minimum system requirements apply. Final eligibility for service will be determined by a TELUS representative.')
+      cy.get('.List__StyledListItem-ju21tg-0').invoke('text').should('contain','Offer subject to change without notice')
 
       
 

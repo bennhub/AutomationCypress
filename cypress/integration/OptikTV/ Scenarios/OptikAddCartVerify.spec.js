@@ -28,7 +28,7 @@
       cy.xpath('(.//*[normalize-space(text()) and normalize-space(.)="THEME PACK"])[8]/following::input[1]').click()
         
 
-
+4
       
   
 

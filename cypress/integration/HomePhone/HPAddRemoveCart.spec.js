@@ -7,13 +7,10 @@ describe('Home Phone', function() {
   
       // Should be on a new URL which includes '/home-phone/plans'
       cy.url().should('include', '/home-phone/plans')
-      
-      cy.get('[data-qa=button-home-phone]').click()
-        
-      cy.contains('Check availability').click()
-        .wait(3000)
+
+      cy.contains('Get started').click()
   
-      cy.get('#autocomplete-form-address')
+      cy.get('#autocomplete-form-address-google')
         .type(Cypress.env('address_150'))
   
       cy.contains('Check availability').click()

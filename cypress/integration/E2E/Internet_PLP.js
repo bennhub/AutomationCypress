@@ -3,19 +3,19 @@ describe('Internet Plans', function() {
 
 //Visits Home and begins to qual
 cy.visit(Cypress.env('baseUrl'))
-//cy.contains('Get started').click()
+cy.contains('Get started').click()
 
 //Quals Compass address
-///cy.get('#autocomplete-form-address-google')
-        //.type(Cypress.env('address_150'))
+cy.get('#autocomplete-form-address-google')
+        .type(Cypress.env('address_150'))
   
-//cy.contains('Check availability').click()
-         //.wait(7000) 
+cy.contains('Check availability').click()
+         .wait(7000) 
    
 //lands back on home page
 //Go to internet plans 
 cy.get('[data-qa=button-internet]').click()
-        .wait(3000)
+        .wait(2000)
 
 //snapshots page Internet PLP for comparison
 cy.eyesOpen({
@@ -24,8 +24,12 @@ cy.eyesOpen({
       browser: { width: 1024, height: 768, name: 'chrome' },
     });
 cy.eyesCheckWindow('Int Plans Page');
-    
+
 cy.eyesClose();
+
+
+
+
     })
   })
   

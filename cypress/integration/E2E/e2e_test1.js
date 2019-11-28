@@ -13,10 +13,7 @@ describe('Home', function() {
   });
   cy.eyesCheckWindow('Home Page');
   
-
-
   //Clicks on get started
-    
   cy.contains('Get started').click()
 
   //Quals Compass address

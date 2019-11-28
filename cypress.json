@@ -4,5 +4,7 @@
   "defaultCommandTimeout": 40000,
   "pageLoadTimeout": 30000,
   "numTestsKeptInMemory": 10,
-  "projectId": "7iekg4"
+  "projectId": "7iekg4",
+  "waitForAnimations": false,
+  "animationDistanceThreshold": 50
 }

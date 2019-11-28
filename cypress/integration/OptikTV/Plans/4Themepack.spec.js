@@ -3,31 +3,16 @@ describe('Optik 4TP Plan', function() {
     
       
     cy.visit('https://www.telus.com/en/bc/shop/home/optik/plans')
-
-    cy.xpath('//span[contains(text(),"BenQ 1080p Home Theatre Projector")]')
     
-    cy.xpath('//span[@class="css-1fuwhtx"][contains(text(),"$500 Visa Prepaid Card")]')
+    cy.contains('Get started').click()
 
-    cy.xpath('//span[@class="css-1fuwhtx"][contains(text(),"50 LG 4K HDR Smart TV")]')
-
-    cy.get('[data-qa=button-benq-projector]').click()
-
-    cy.get('.css-11bxvq').should('be.visible');
-
-    cy.xpath('//a[contains(text(),"Gift with Purchase")]').click()
-
-    cy.get('[data-qa=button-500-visa]').click()
-
-    cy.get('.css-11bxvq').should('be.visible');
-
-    cy.xpath('//a[contains(text(),"Gift with Purchase")]').click()
-
-    cy.get('.css-vbu1if:nth-child(3) .TDS_BaseButton-modules__sizing___2kf7G').click()
-              
-    cy.get('.css-11bxvq').should('be.visible');
-
-    cy.xpath('//a[contains(text(),"Gift with Purchase")]').click()
-
+    cy.get('#autocomplete-form-address-google')
+        .type(Cypress.env('address_150'))
+  
+      cy.contains('Check availability').click()
+         .wait(9000) 
+    
+    
 
 
 

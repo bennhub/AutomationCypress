@@ -12,11 +12,8 @@
 // the project's config changing)
 
 module.exports = (on, config) => {
-  
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
-  apiKey: 'CD1YT24VlUgjfgDGDoWW66kFTqp7nek5s3Al4SXbJwE110'
 }
-
 
 require('@applitools/eyes-cypress')(module);

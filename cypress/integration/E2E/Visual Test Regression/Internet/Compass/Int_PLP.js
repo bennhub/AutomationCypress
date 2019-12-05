@@ -1,6 +1,7 @@
 describe('Internet Plans', function() {
     it('Gets, types and visual tests', function() {
 
+
 //Visits Home and begins to qual
 cy.visit(Cypress.env('baseUrl'))
 cy.contains('Get started').click()
@@ -16,17 +17,16 @@ cy.contains('Check availability').click()
 //Go to internet plans 
 cy.get('[data-qa=button-internet]').click()
         .wait(2000)
-
-cy.contains('Learn More').click()
-        .wait(2000)
+//
 
 //snapshots page Internet PLP for comparison
 cy.eyesOpen({
       appName: 'E2E CATA',
-      testName: 'Internet_PDP',
-      browser: { width: 1024, height: 768, name: 'chrome' },
+      testName: 'Internet PLP QUAL',
+      browser: { width: 1024, height: 768, name: 'chrome' }
+    
     });
-cy.eyesCheckWindow('Int_150_24_PDP');
+cy.eyesCheckWindow('Int Plans Page');
 
 cy.eyesClose();
 

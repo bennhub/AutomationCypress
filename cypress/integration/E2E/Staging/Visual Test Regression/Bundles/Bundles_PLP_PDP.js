@@ -13,7 +13,7 @@ cy.contains('Check availability').click()
          .wait(7000) 
    
 //visit internet Addons PLP
-cy.visit('https://digital:notwebchannel@wwww.wcstage.telus.com/en/shop/home/bundle/plans')
+cy.visit('https://digital:notwebchannel@www.wcstage.telus.com/en/shop/home/bundle/plans')
 
 //Opens FAQ section
 //cy.contains('Frequently Asked Questions').click()
@@ -34,7 +34,7 @@ cy.eyesCheckWindow('Bundles_PLP');
 cy.eyesClose();
 
 //visit Bundles Optik 7-1 + Int 150 PDP
-cy.visit('https://digital:notwebchannel@wwww.wcstage.telus.com/en/shop/home/product/optik-7plus1-int150?bundle')
+cy.visit('https://digital:notwebchannel@www.wcstage.telus.com/en/shop/home/product/optik-7plus1-int150?bundle')
 
 //Opens T & C section
 cy.contains('View terms and conditions').click()
